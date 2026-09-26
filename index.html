@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metadatos Básicos -->
+<title>Luis González | QA Engineer & Security Analyst</title>
+<meta name="description" content="Portfolio profesional de QA Engineer, Security Analyst y Technical Writer especialista en API Testing, DAST y automatización.">
+
+<!-- Favicon ligero mediante SVG en código (Escudo QA) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+
+<!-- Open Graph para LinkedIn, WhatsApp y Redes Sociales -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Luis González | QA Engineer & Security Analyst">
+<meta property="og:description" content="Especialista en API Testing, DAST, Cypress y documentación técnica. Explora proyectos y evidencias de ejecución.">
+<meta property="og:image" content="https://lgonzwork.github.io/index_images/showcase_image1.png">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Luis González | QA Engineer & Security Analyst">
+<meta name="twitter:description" content="Especialista en API Testing, DAST, Cypress y documentación técnica.">
+<meta name="twitter:image" content="https://lgonzwork.github.io/index_images/showcase_image1.png">
+    <style>
+        :root {
+            --bg-main: #0a0a0a;
+            --bg-card: #121212;
+            --bg-card-hover: #1a1a1a;
+            --border-color: #262626;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --accent-red: #dc2626;
+            --accent-red-hover: #ef4444;
+            --badge-bg: #1f1212;
+            --badge-border: #450a0a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .header-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            color: var(--text-primary);
+        }
+
+        .role-title {
+            color: var(--accent-red);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-info a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-red);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--border-color);
+        }
+
+        .summary {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--accent-red);
+            border-radius: 6px;
+            padding: 1rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-2px);
+            background-color: var(--bg-card-hover);
+        }
+
+        .skill-card h3 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            background-color: var(--badge-bg);
+            border: 1px solid var(--badge-border);
+            color: #fca5a5;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        /* Timeline / Experience */
+        .timeline-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .job-title {
+            color: var(--accent-red);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+        }
+
+        ul.bullets {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.bullets li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        ul.bullets li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-title a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        /* Languages & Certs */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .item-header { flex-direction: column; gap: 0.25rem; }
+            body { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    // Al hacer clic en cualquier imagen con la clase .lightbox-trigger
+    triggers.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    // Cerrar al hacer clic en el botón X
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    // Cerrar al hacer clic fuera de la imagen (en el fondo oscuro)
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove('active');
+      }
+    });
+
+    // Cerrar presionado la tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <!-- ESTILOS MEJORADOS PARA EL HEADER Y CONTACTO -->
+<style>
+    header {
+        border-bottom: 2px solid #262626;
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .header-main {
+        margin-bottom: 1.75rem;
+    }
+
+    .name-title {
+        font-size: 3rem;
+        font-weight: 900;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .subtitle {
+        color: #dc2626;
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+    }
+
+    /* GRID / CONTENEDOR DE BARS DE CONTACTO */
+    .contact-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        align-items: center;
+    }
+
+    /* PÍLDORAS / BADGES DE CONTACTO */
+    .contact-card {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: linear-gradient(145deg, #141414 0%, #0d0d0d 100%);
+        border: 1px solid #262626;
+        border-radius: 6px;
+        padding: 0.6rem 1rem;
+        color: #e5e5e5;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    /* SVG ICONOS DENTRO DEL BADGE */
+    .contact-card svg {
+        width: 18px;
+        height: 18px;
+        fill: #dc2626;
+        transition: transform 0.2s ease, fill 0.2s ease;
+    }
+
+    /* HOVER INTERACTIVO EN CADA CONTACTO */
+    .contact-card:hover {
+        background: #1f1212;
+        border-color: #ef4444;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+    }
+
+    .contact-card:hover svg {
+        fill: #ef4444;
+        transform: scale(1.15);
+    }
+
+    /* DESTACADO ESPECIAL PARA EL LINK DE GITHUB */
+    .contact-card.primary {
+        border-color: #450a0a;
+        background: linear-gradient(145deg, #1f1212 0%, #140808 100%);
+    }
+
+    /* RESPONSIVE EN MÓVILES */
+    @media (max-width: 768px) {
+        .name-title { font-size: 2.2rem; }
+        .subtitle { font-size: 1.1rem; }
+        .contact-bar { flex-direction: column; align-items: stretch; }
+    }
+</style>
+
+<!-- ESTRUCTURA HTML REVISADA -->
+<header>
+    <div class="header-main">
+        <h1 class="name-title">LUIS GONZALEZ</h1>
+        <div class="subtitle">QA Engineer & Security Analyst | Technical Writer & API Specialist</div>
+    </div>
+
+    <div class="contact-bar">
+        <!-- Ubicación -->
+        <div class="contact-card">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Valencia, Venezuela</span>
+        </div>
+
+        <!-- Teléfono -->
+        <a href="tel:+584220219403" class="contact-card">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>+58 4220219403</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:lugonzd.personal@gmail.com" class="contact-card">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>lugonzd.personal@gmail.com</span>
+        </a>
+
+        <!-- GitHub (Primary Highlight) -->
+        <a href="https://github.com/lgonzwork" target="_blank" class="contact-card primary">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span>github.com/lgonzwork</span>
+        </a>
+    </div>
+</header>
+        </header>
+
+        <!-- SUMMARY -->
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                Detail-oriented and results-driven QA Engineer, Security Analyst, and Technical Writer with strong expertise in API functional testing, client-side security auditing, and E2E web automation. Skilled in translating complex system workflows into standardized technical documentation (SOPs), designing robust test collections, and implementing automated security scanning within CI/CD environments. Proven background in operational execution, process optimization, and database validation, leveraging a unique blend of technical testing capabilities and C2 bilingual communication.
+            </p>
+        </section>
+
+        <!-- SKILLS / TOOLING -->
+        <section>
+            <!-- CSS AÑADIDO / ACTUALIZADO -->
+<style>
+    /* Textura de fondo sutil con patrón de puntos/malla */
+    body {
+        background-color: #0a0a0a;
+        background-image: radial-gradient(#262626 1px, transparent 1px);
+        background-size: 20px 20px;
+    }
+
+    /* Header principal de la sección más prominente */
+    .section-header-large {
+        font-size: 1.6rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: #dc2626;
+        margin-bottom: 1.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        text-shadow: 0 0 12px rgba(220, 38, 38, 0.25);
+    }
+
+    .section-header-large::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(90deg, #dc2626 0%, rgba(220, 38, 38, 0.1) 100%);
+    }
+
+    /* Grid Mosaico/Ventanilla de 4 (2x2 perfecto) */
+    .skills-mosaic {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Tarjeta Ventanilla */
+    .skill-card-mosaic {
+        background: linear-gradient(145deg, #121212 0%, #0d0d0d 100%);
+        border: 1px solid #262626;
+        border-left: 4px solid #dc2626;
+        border-radius: 8px;
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Hover en la Ventanilla/Tarjeta */
+    .skill-card-mosaic:hover {
+        transform: translateY(-4px);
+        border-color: #404040;
+        border-left-color: #ef4444;
+        box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.25), 
+                    0 0 15px rgba(220, 38, 38, 0.15);
+        background: linear-gradient(145deg, #171717 0%, #121212 100%);
+    }
+
+    /* Encabezados internos de cada tarjeta (Más grandes) */
+    .skill-card-mosaic h3 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 1.2rem;
+        letter-spacing: -0.01em;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    /* Estructura de etiquetas / Tags */
+    .tags-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+    }
+
+    .tag-item {
+        background-color: #170d0d;
+        border: 1px solid #450a0a;
+        color: #fca5a5;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.35rem 0.75rem;
+        border-radius: 5px;
+        font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+        transition: all 0.2s ease-in-out;
+        cursor: default;
+    }
+
+    /* Hover individual en las etiquetas */
+    .tag-item:hover {
+        background-color: #991b1b;
+        color: #ffffff;
+        border-color: #ef4444;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+    }
+
+    /* Ajuste para pantallas móviles */
+    @media (max-width: 768px) {
+        .skills-mosaic {
+            grid-template-columns: 1fr;
+        }
+    }
+
+/* Puntero de zoom sobre las imágenes clicables */
+.lightbox-trigger {
+  cursor: zoom-in;
+}
+
+/* Fondo oscuro translúcido que cubre toda la pantalla */
+.lightbox {
+  display: none; 
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(4px); /* Efecto difuminado elegante de fondo */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Muestra el Lightbox activado */
+.lightbox.active {
+  display: flex;
+}
+
+/* Estilo de la imagen ampliada */
+.lightbox-content {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  animation: zoomIn 0.25s ease-out;
+}
+
+/* Botón de cierre (X) */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+  color: #e50914;
+}
+
+/* Animación de apertura */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+</style>
+
+<!-- HTML DE LA SECCIÓN EN FORMATO MOSAICO -->
+<section>
+    <h2 class="section-header-large">Technical Skills & Tooling Architecture</h2>
+    
+    <div class="skills-mosaic">
+        <!-- Ventanilla 1 -->
+        <div class="skill-card-mosaic">
+            <h3>API & Contract Testing</h3>
+            <div class="tags-container">
+                <span class="tag-item">Postman</span>
+                <span class="tag-item">Newman CLI</span>
+                <span class="tag-item">JSON Schema</span>
+                <span class="tag-item">RESTful APIs</span>
+                <span class="tag-item">JWT / OAuth</span>
+            </div>
+        </div>
+
+        <!-- Ventanilla 2 -->
+        <div class="skill-card-mosaic">
+            <h3>Security & DAST Auditing</h3>
+            <div class="tags-container">
+                <span class="tag-item">OWASP ZAP</span>
+                <span class="tag-item">Docker</span>
+                <span class="tag-item">Nmap</span>
+                <span class="tag-item">BOLA / BFLA</span>
+                <span class="tag-item">OWASP Top 10</span>
+                <span class="tag-item">Security Headers</span>
+            </div>
+        </div>
+
+        <!-- Ventanilla 3 -->
+        <div class="skill-card-mosaic">
+            <h3>Web Automation & Scripting</h3>
+            <div class="tags-container">
+                <span class="tag-item">Cypress</span>
+                <span class="tag-item">SQL (Postgres/MySQL)</span>
+                <span class="tag-item">PowerShell CLI</span>
+                <span class="tag-item">Bash</span>
+                <span class="tag-item">Git & GitHub</span>
+            </div>
+        </div>
+
+        <!-- Ventanilla 4 -->
+        <div class="skill-card-mosaic">
+            <h3>Documentation & Ops</h3>
+            <div class="tags-container">
+                <span class="tag-item">Technical Writing</span>
+                <span class="tag-item">SOPs</span>
+                <span class="tag-item">Jira & Confluence</span>
+                <span class="tag-item">Notion</span>
+                <span class="tag-item">Markdown</span>
+                <span class="tag-item">Process Mapping</span>
+            </div>
+        </div>
+    </div>
+</section>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section>
+            <h2>Relevant Technical Experience</h2>
+            
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">FREELANCE / INDEPENDENT</div>
+                        <div class="job-title">QA Automation, DAST Security & Technical Writer</div>
+                    </div>
+                    <div class="date">Nov 2025 – Present</div>
+                </div>
+                <ul class="bullets">
+                    <li>Designed and executed an integrated 5-phase QA & Security Playbook combining network reconnaissance, API validation, E2E automation, and DAST security scans.</li>
+                    <li>Authored and maintained comprehensive Postman API test suites with automated JSON Schema assertions and Newman CLI integration for continuous pipeline validation.</li>
+                    <li>Configured containerized OWASP ZAP DAST scans in Docker & GitHub Actions, enabling automated passive/active vulnerability scans (SQLi, XSS, CORS) on push events.</li>
+                    <li>Developed client-side security specs in Cypress to audit local storage token exposure, CSP headers, and HTTP cookie security attributes.</li>
+                    <li>Produced executive-ready vulnerability assessment reports and technical remediation guides in Markdown and Confluence with CVSS scoring and reproduction logs.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">GUAVA DOCS BY GUAVA</div>
+                        <div class="job-title">Founder & Technical Documentation Specialist</div>
+                    </div>
+                    <div class="date">Dec 2025 – Present</div>
+                </div>
+                <ul class="bullets">
+                    <li>Created bilingual SOP systems, technical documentation, and structured training materials for B2B/B2C operational workflows.</li>
+                    <li>Delivered specialized technical translation and interpretation, ensuring precision across complex technical, industrial, and compliance topics.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">METRO STAFF INC. (USA)</div>
+                        <div class="job-title">HR Generalist & Operations Support</div>
+                    </div>
+                    <div class="date">Apr 2024 – Nov 2025</div>
+                </div>
+                <ul class="bullets">
+                    <li>Administered HRIS platforms, compliance logs, and operational databases, enforcing strict accuracy and document integrity standards.</li>
+                    <li>Coordinated real-time logistics and personnel dispatching across high-volume operational environments.</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="item-header">
+                    <div>
+                        <div class="company">AARROW INC. (USA / Panama)</div>
+                        <div class="job-title">HR & Operations Coordinator / Process Debugger</div>
+                    </div>
+                    <div class="date">May 2019 – Mar 2020</div>
+                </div>
+                <ul class="bullets">
+                    <li>Executed operational process debugging: identified, documented, and reported operational workflow defects to management for resolution.</li>
+                    <li>Produced structured operational documentation and campaign reports to optimize cross-functional team productivity.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PROJECTS & PORTFOLIO -->
+        <section>
+            <h2>Key Projects & Portfolio</h2>
+            <div class="project-card">
+                <div class="project-title">
+                    <span>Integrated Testing & Security QA Playbook</span>
+                    <a href="https://github.com/lgonzwork" target="_blank">[View on GitHub ↗]</a>
+                </div>
+                <ul class="bullets">
+                    <li><strong>API & Data Integrity Suite:</strong> Postman & Newman execution suite with SQL queries verifying database persistence on state-changing API endpoints (<code>POST</code>, <code>PUT</code>, <code>DELETE</code>).</li>
+                    <li><strong>Client-Side Security & E2E Suite:</strong> Cypress spec suite capturing authentication flows, UI state handling, and client-side security header compliance.</li>
+                    <li><strong>DAST & Reconnaissance Pipeline:</strong> Nmap CLI port/service mapper paired with OWASP ZAP containerized scanning integrated into GitHub Actions CI/CD workflows.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- EDUCATION & LANGUAGES -->
+        <section>
+            <div class="grid-2col">
+                <div>
+                    <h2>Education & Certs</h2>
+                    <ul class="bullets">
+                        <li><strong>EF SET C2 English Certificate</strong> (Proficient / Native-level) – EF SET (2026)</li>
+                        <li><strong>APISec University Coursework:</strong> API Security Fundamentals, OWASP API Top 10, API Authentication, Securing API Servers</li>
+                        <li><strong>AALB Medical Interpretation:</strong> 60-Hour Specialized Program</li>
+                        <li><strong>Technical Coursework:</strong> Manual QA Fundamentals, SQL for Data Science & QA (Udemy)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>Languages</h2>
+                    <ul class="bullets">
+                        <li><strong>English:</strong> C2 Native-Level Proficiency</li>
+                        <li><strong>Spanish:</strong> Native</li>
+                        <li><strong>Italian:</strong> Intermediate</li>
+                        <li><strong>Portuguese:</strong> Intermediate</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+<style>
+
+    /* ESTILOS DE GALERÍA Y SHOWCASE */
+    /* Contenedor de la tarjeta */
+.project-card {
+  background-color: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #e50914; /* Tono rojo/acento de tu web */
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.15);
+}
+
+/* Marco de la imagen con recorte circular/recto según border-radius */
+.card-image-wrapper {
+  width: 100%;
+  height: 200px; /* Ajusta la altura deseada */
+  overflow: hidden; /* Evita que la imagen se salga del contenedor al agrandarse */
+  position: relative;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Zoom suave */
+}
+
+/* EFECTO HOVER: Agrandar imagen */
+.project-card:hover .project-img {
+  transform: scale(1.08); /* Crece un 8% al pasar el cursor */
+}
+
+/* Estilos de contenido */
+.card-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.tags-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: rgba(229, 9, 20, 0.1);
+  color: #e50914;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+
+/* Asegurar que el enlace ocupe todo el contenedor */
+.image-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in; /* Muestra el icono de lupa para ampliar */
+}
+
+
+
+/* Mantener el zoom suave al hacer hover sobre el enlace */
+.image-link:hover .project-img {
+  transform: scale(1.08);
+}
+
+
+
+    /* ESTILOS DEL CAROUSEL (Self-Audit Testing) */
+    .carousel-container {
+        position: relative;
+        background: #0d0d0d;
+        border: 1px solid #262626;
+        border-left: 4px solid #dc2626;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .carousel-slide {
+        display: none;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .carousel-slide.active {
+        display: block;
+    }
+
+    .carousel-img {
+        width: 100%;
+        max-height: 380px;
+        object-fit: contain;
+        background: #000;
+        border-radius: 6px;
+        border: 1px solid #333;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .carousel-btn {
+        background: #1f1212;
+        border: 1px solid #450a0a;
+        color: #fca5a5;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+
+    .carousel-btn:hover {
+        background: #dc2626;
+        color: #fff;
+    }
+
+    /* ESTILOS DEL FORMULARIO DE AGENDAMIENTO */
+    .booking-section {
+        background: linear-gradient(145deg, #121212 0%, #080808 100%);
+        border: 1px solid #262626;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-top: 2.5rem;
+    }
+
+    .booking-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .form-group.full-width {
+        grid-column: span 2;
+    }
+
+    .form-group label {
+        color: #e5e5e5;
+        font-size: 0.85rem;
+        font-weight: 600;
+    }
+
+    .form-group input, .form-group select, .form-group textarea {
+        background: #0a0a0a;
+        border: 1px solid #333;
+        border-radius: 5px;
+        padding: 0.65rem 0.85rem;
+        color: #fff;
+        font-family: inherit;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        border-color: #dc2626;
+        box-shadow: 0 0 8px rgba(220, 38, 38, 0.3);
+    }
+
+    .submit-btn {
+        grid-column: span 2;
+        background: #dc2626;
+        color: #fff;
+        border: none;
+        padding: 0.85rem;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.25s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .submit-btn:hover {
+        background: #ef4444;
+        box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+        .booking-form { grid-template-columns: 1fr; }
+        .form-group.full-width, .submit-btn { grid-column: span 1; }
+    }
+</style>
+
+
+<!-- SECCIÓN DE PROYECTOS -->
+<section class="featured-projects">
+  <h2 class="section-title">FEATURED PROJECTS & EVIDENCE</h2>
+
+  <div class="projects-grid">
+    <!-- Proyecto 1: Newman CLI -->
+    <article class="project-card">
+      <div class="card-image-wrapper">
+        <img 
+          src="index_images/showcase_image1.png" 
+          alt="Headless Execution & HTML Reporting (Newman CLI)" 
+          class="project-img lightbox-trigger" 
+        />
+      </div>
+      <div class="card-content">
+        <h3 class="project-title">Headless Execution & HTML Reporting</h3>
+        <p class="project-description">
+          Ejecución automatizada de colecciones Postman vía Newman CLI con generación de reportes HTML ejecutivos para análisis de rendimiento y assertions.
+        </p>
+        <div class="tags-container">
+          <span class="tag">Postman</span>
+          <span class="tag">Newman</span>
+          <span class="tag">HTML Extra</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Proyecto 2: Cypress Security Pipeline -->
+    <article class="project-card">
+      <div class="card-image-wrapper">
+        <img 
+          src="index_images/showcase_image2.png" 
+          alt="Headless Web & API Security Scanning Pipeline (Cypress)" 
+          class="project-img lightbox-trigger" 
+        />
+      </div>
+      <div class="card-content">
+        <h3 class="project-title">Headless Web Security Pipeline</h3>
+        <p class="project-description">
+          Automation suite E2E con Cypress integrada a escaneos activos de seguridad headless sobre proxies y endpoints web.
+        </p>
+        <div class="tags-container">
+          <span class="tag">Cypress</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">DAST</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- CONTENEDOR LIGHTBOX (Modal) -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img" alt="Ampliación de evidencia" />
+</div>
+
+
+
+<!-- 2. SECCIÓN: CAROUSEL DE TESTING DE TU PROPIA PÁGINA -->
+<section style="margin-top: 3rem;">
+    <h2 class="section-header-large">Self-System Audit & Test Cycle</h2>
+    <div class="carousel-container">
+        <!-- Slide 1: Security Testing -->
+        <div class="carousel-slide active" id="slide-1">
+            <img src="ruta-screenshot-zap-scan.png" alt="OWASP ZAP Security Scan" class="carousel-img">
+            <h3 style="color: #fff; font-size: 1.1rem;">Fase 1: Security & DAST Audit (OWASP ZAP)</h3>
+            <p style="color: #a3a3a3; font-size: 0.85rem; margin-top: 0.3rem;">
+                Evaluación dinámica de vulnerabilidades, verificación de Security Headers (CSP, HSTS) y pruebas contra XSS en el formulario de contacto.
+            </p>
+        </div>
+
+        <!-- Slide 2: E2E Automation -->
+        <div class="carousel-slide" id="slide-2">
+            <img src="ruta-screenshot-cypress.png" alt="Cypress E2E Testing" class="carousel-img">
+            <h3 style="color: #fff; font-size: 1.1rem;">Fase 2: E2E Web Automation (Cypress)</h3>
+            <p style="color: #a3a3a3; font-size: 0.85rem; margin-top: 0.3rem;">
+                Verificación automatizada de interfaz, resolución responsive, navegación fluida y comportamiento de inputs.
+            </p>
+        </div>
+
+        <!-- Nav Controls -->
+        <div class="carousel-nav">
+            <button class="carousel-btn" onclick="moveSlide(-1)">❮ Anterior</button>
+            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 2</span>
+            <button class="carousel-btn" onclick="moveSlide(1)">Siguiente ❯</button>
+        </div>
+    </div>
+</section>
+
+<!-- 3. SECTION: RECRUITER BOOKING FORM (API INTEGRATED) -->
+<section style="margin-top: 3rem;">
+    <div class="booking-section">
+        <h2 style="color: #fff; font-size: 1.4rem; font-weight: 800; text-transform: uppercase;">Schedule an Interview / Hire Request</h2>
+        <p style="color: #a3a3a3; font-size: 0.9rem; margin-top: 0.3rem;">
+            Submit your job opening or inquiry directly to my inbox via API.
+        </p>
+
+        <!-- Replace 'YOUR_FORM_ID' with your Formspree ID -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form">
+            <!-- Full Name & Company -->
+            <div class="form-group">
+                <label for="company">Full Name & Company</label>
+                <input type="text" id="company" name="Company_Name" placeholder="e.g., TechCorp / Jane Doe" required>
+            </div>
+
+            <!-- Industry / Company Type -->
+            <div class="form-group">
+                <label for="company_type">Industry / Company Type</label>
+                <select id="company_type" name="Company_Type">
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Fintech">Fintech</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Healthcare Tech">Healthcare Tech</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Skill Interest -->
+            <div class="form-group">
+                <label for="primary_skill">Primary Technical Skill of Interest</label>
+                <select id="primary_skill" name="Primary_Skill">
+                    <option value="API Testing & Contract Testing">API Testing & Contract Testing</option>
+                    <option value="Security / DAST Auditing">Security / DAST Auditing</option>
+                    <option value="Web Automation (Cypress)">Web Automation (Cypress)</option>
+                    <option value="Technical Documentation / SOPs">Technical Documentation / SOPs</option>
+                    <option value="Full QA Engineer Role">Full QA Engineer Role</option>
+                </select>
+            </div>
+
+            <!-- Employment Type -->
+            <div class="form-group">
+                <label for="contract_type">Employment / Engagement Type</label>
+                <select id="contract_type" name="Contract_Type">
+                    <option value="Full-Time (Remote)">Full-Time (Remote)</option>
+                    <option value="Part-Time / Contract">Part-Time / Contract</option>
+                    <option value="Consulting / B2B">Consulting / B2B</option>
+                </select>
+            </div>
+
+            <!-- Interview Timeline -->
+            <div class="form-group">
+                <label for="interview_timeline">Desired Interview Timeline</label>
+                <input type="text" id="interview_timeline" name="Interview_Timeline" placeholder="e.g., This week / ASAP">
+            </div>
+
+            <!-- Target Start Date -->
+            <div class="form-group">
+                <label for="hire_deadline">Target Hiring Completion Date</label>
+                <input type="date" id="hire_deadline" name="Target_Hiring_Date">
+            </div>
+
+            <!-- Additional Details -->
+            <div class="form-group full-width">
+                <label for="message">Additional Role & Project Details</label>
+                <textarea id="message" name="Project_Details" rows="3" placeholder="Brief overview of the position, scope, or project expectations..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Interview Request</button>
+        </form>
+    </div>
+</section>
+
+<!-- SCRIPT LIGERO PARA EL CAROUSEL -->
+<script>
+    let currentSlide = 1;
+    const totalSlides = 2;
+
+    function moveSlide(direction) {
+        document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+        currentSlide += direction;
+
+        if (currentSlide > totalSlides) currentSlide = 1;
+        if (currentSlide < 1) currentSlide = totalSlides;
+
+        document.getElementById(`slide-${currentSlide}`).classList.add('active');
+        document.getElementById('slide-indicator').innerText = `Fase ${currentSlide} / ${totalSlides}`;
+    }
+</script>
+
+        <footer>
+            <p>© 2026 Luis Gonzalez — Designed for async remote engineering teams.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
