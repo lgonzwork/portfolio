@@ -629,7 +629,36 @@
     opacity: 1;
   }
 }
+    .audit-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.audit-card {
+    background: #141414;
+    border: 1px solid #262626;
+    border-left: 4px solid #10b981;
+    padding: 1.25rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+    .audit-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
+
+
+
 
 <!-- HTML DE LA SECCIÓN EN FORMATO MOSAICO -->
 <section>
@@ -1068,56 +1097,56 @@
 </div>
 
 
-<!-- SECCIÓN: CAROUSEL DE TESTING DE TU PROPIA PÁGINA -->
+<!-- SECCIÓN: CAROUSEL DE TESTING & AUDIT -->
 <section style="margin-top: 3rem;">
-    <h2 class="section-header-large">Self-System Audit & Test Cycle</h2>
+    <h2 class="section-header-large" style="color: #fff; font-size: 1.5rem; font-weight: 800; text-transform: uppercase;">Self-System Audit & Test Cycle</h2>
     <div class="carousel-container" style="background: rgba(18, 18, 18, 0.8); border: 1px solid rgba(220, 38, 38, 0.3); border-left: 3px solid #dc2626; border-radius: 8px; padding: 1.5rem; position: relative;">
         
         <!-- Slide 1: Recon & Nmap Scan -->
         <div class="carousel-slide" id="slide-1" style="display: block;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
-                <img src="index_images/showcase_image2.png" alt="Infrastructure Reconnaissance & Network Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
-                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+                <img src="index_images/self_audit1.png" alt="Infrastructure Reconnaissance & Network Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 1: Infrastructure Reconnaissance & Network Scan (Nmap)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 1: Infrastructure Reconnaissance & Network Scan (Nmap)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Escaneo activo de puertos y detección de servicios/OS. Identificación de puertos expuestos (HTTP/HTTPS/SSH) y verificación de superficie de ataque en el servidor objetivo.
+                Active port scanning, service detection, and OS fingerprinting. Identified exposed ports (HTTP/HTTPS) and verified attack surface minimization on target server.
             </p>
         </div>
 
         <!-- Slide 2: API Testing (Newman) -->
         <div class="carousel-slide" id="slide-2" style="display: none;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
-                <img src="index_images/showcase_image1.png" alt="API Functional & Schema Validation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
-                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+                <img src="index_images/self_audit2.png" alt="API Functional & Schema Validation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 2: API Functional & Schema Validation (Postman / Newman)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 2: API Functional & Schema Validation (Postman / Newman)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Ejecución headless de colecciones de integración para la API de contacto (Formspree/Backend). Validación de esquemas JSON, códigos de respuesta HTTP (200 OK vs 400 Bad Request) y latencia &lt; 1500ms.
+                Headless CLI execution of Postman integration suites for the contact API. Verified JSON schemas, HTTP status codes (200 OK / 202 Accepted), and response latencies under 1500ms.
             </p>
         </div>
 
         <!-- Slide 3: E2E Automation (Cypress) -->
         <div class="carousel-slide" id="slide-3" style="display: none;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
-                <img src="index_images/showcase_image1.png" alt="Web E2E GUI Automation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
-                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+                <img src="index_images/self_audit3.png" alt="Web E2E GUI Automation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 3: Web E2E GUI Automation & UI Assertions (Cypress)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 3: Web E2E GUI Automation & UI Assertions (Cypress)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Pruebas de navegación, renderizado dinámico de proyectos, carrusel UI, overlays modales y flujo completo de envío de formularios en ejecuciones Headless CLI en Chrome/Electron.
+                End-to-end user navigation flow tests, dynamic project rendering, UI carousel controls, modal overlay assertions, and complete form submission cycles executed via Headless CLI runner.
             </p>
         </div>
 
         <!-- Slide 4: Security Testing (DAST OWASP ZAP) -->
         <div class="carousel-slide" id="slide-4" style="display: none;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
-                <img src="index_images/showcase_image2.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
-                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+                <img src="index_images/self_audit4.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 4: Dynamic Application Security Testing (OWASP ZAP)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 4: Dynamic Application Security Testing (OWASP ZAP)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Evaluación dinámica de vulnerabilidades con ZAP Baseline Scan (55 PASS / 0 FAIL). Verificación de Security Headers (CSP, HSTS) e inyección XSS de prueba en la API de contacto.
+                Dynamic application security assessment executed in Docker. Validated active defenses against XSS, injection vectors, CSP policies, and anti-clickjacking HTTP security headers.
             </p>
         </div>
 
@@ -1125,54 +1154,66 @@
         <div class="carousel-slide" id="slide-5" style="display: none;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
                 <img src="index_images/showcase_image2.png" alt="Technical Architecture & Test Strategy" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
-                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 5: Technical Architecture & Test Strategy Documentation</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 5: Technical Architecture & Test Strategy Documentation</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Mapeo de matrices de cobertura de pruebas, diseño de casos de prueba en Confluence/Jira Xray y documentación técnica del ecosistema bajo arquitectura de 3 capas.
+                Test coverage mapping, structured test design, Jira Xray traceability matrices, and standardized SOP documentation covering the end-to-end system testing cycle.
             </p>
         </div>
 
-        <!-- Slide 6: Executive Audit Summary & Final Findings -->
+        <!-- Slide 6: Executive Audit Summary & Final Findings (Mosaico 2x2) -->
         <div class="carousel-slide" id="slide-6" style="display: none;">
             <div style="padding: 0.5rem; color: #fff;">
                 <h3 style="color: #dc2626; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.3rem;">📊 Executive Audit Summary & Final Findings</h3>
-                <p style="color: #a3a3a3; font-size: 0.88rem; margin-bottom: 1.2rem;">Consolidado general del ciclo de auditoría de calidad y seguridad:</p>
+                <p style="color: #a3a3a3; font-size: 0.88rem; margin-bottom: 1.2rem;">Consolidated assessment of system quality, reliability, and security post-audit:</p>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
-                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
-                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">Network & Infra</h4>
-                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">SECURE</span>
-                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Puertos seguros, sin servicios vulnerables ni exposición indebida.</p>
+                <!-- Mosaico 2x2 Responsive -->
+                <div class="audit-summary-grid">
+                    <div class="audit-card">
+                        <div>
+                            <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">Network & Infra</h4>
+                            <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">SECURE</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Hardened ports, zero vulnerable active services, and zero unauthorized exposure.</p>
                     </div>
-                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
-                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">API Contracts</h4>
-                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">100% PASS</span>
-                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Payloads sanitizados y esquemas JSON estrictamente validados.</p>
+
+                    <div class="audit-card">
+                        <div>
+                            <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">API Contracts</h4>
+                            <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">100% PASS</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Sanitized request payloads and strictly verified JSON schema response assertions.</p>
                     </div>
-                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
-                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">E2E Automation</h4>
-                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">STABLE</span>
-                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Flujos críticos de interfaz, carrusel y modales validados sin fallas.</p>
+
+                    <div class="audit-card">
+                        <div>
+                            <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">E2E Automation</h4>
+                            <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">STABLE</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Critical GUI user journeys, image carousels, and form modal overlays validated without defects.</p>
                     </div>
-                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
-                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">DAST Security</h4>
-                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">0 CRITICAL</span>
-                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Protección activa contra XSS y cabeceras de seguridad verificadas.</p>
+
+                    <div class="audit-card">
+                        <div>
+                            <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">DAST Security</h4>
+                            <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">0 CRITICAL</span>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Active protection against XSS vulnerabilities and hardened security headers verified.</p>
                     </div>
                 </div>
 
                 <div style="background: #111; border-top: 1px solid #222; padding: 0.8rem; font-size: 0.85rem; color: #d4d4d4; border-radius: 4px;">
-                    <p style="margin: 0;"><strong>Conclusión:</strong> El sistema cumple con los criterios de aceptación técnicos, estáticos y dinámicos para entornos de producción.</p>
+                    <p style="margin: 0;"><strong>Conclusion:</strong> The target system meets all static, dynamic, functional, and security acceptance criteria required for production deployment.</p>
                 </div>
             </div>
         </div>
 
         <!-- Nav Controls -->
         <div class="carousel-nav" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 1rem;">
-            <button class="carousel-btn" onclick="moveSlide(-1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">❮ Anterior</button>
-            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 6</span>
-            <button class="carousel-btn" onclick="moveSlide(1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">Siguiente ❯</button>
+            <button class="carousel-btn" onclick="moveSlide(-1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">❮ Previous</button>
+            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Phase 1 / 6</span>
+            <button class="carousel-btn" onclick="moveSlide(1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">Next ❯</button>
         </div>
     </div>
 </section>
