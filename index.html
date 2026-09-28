@@ -1200,7 +1200,7 @@
         <!-- Nav Controls -->
         <div class="carousel-nav" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 1rem;">
             <button class="carousel-btn" onclick="moveSlide(-1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">❮ Previous</button>
-            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 5</span>
+            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Phase 1 / 5</span>
             <button class="carousel-btn" onclick="moveSlide(1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">Next ❯</button>
         </div>
     </div>
@@ -1299,9 +1299,9 @@
 
         const indicator = document.getElementById('slide-indicator');
         if (currentSlide === totalSlides) {
-            indicator.innerText = `Reporte Final / ${totalSlides}`;
+            indicator.innerText = `Final Report / ${totalSlides}`;
         } else {
-            indicator.innerText = `Fase ${currentSlide} / ${totalSlides}`;
+            indicator.innerText = `Phase ${currentSlide} / ${totalSlides}`;
         }
     }
 
