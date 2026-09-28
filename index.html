@@ -1222,6 +1222,46 @@
         </footer>
     </div>
 
+    <!-- Additional Details -->
+            <div class="form-group full-width">
+                <label for="message">Additional Role & Project Details</label>
+                <textarea id="message" name="Project_Details" rows="3" placeholder="Brief overview of the position, scope, or project expectations..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Interview Request</button>
+        </form>
+    </div>
+</section>
+
+<!-- SCRIPT LIGERO PARA EL CAROUSEL (4 FASES) -->
+<script>
+    let currentSlide = 1;
+    const totalSlides = 4; // Actualizado a 4 slides
+
+    function moveSlide(direction) {
+        // Ocultar la diapositiva actual
+        document.getElementById(`slide-${currentSlide}`).style.display = 'none';
+
+        // Calcular la siguiente diapositiva
+        currentSlide += direction;
+
+        if (currentSlide > totalSlides) currentSlide = 1;
+        if (currentSlide < 1) currentSlide = totalSlides;
+
+        // Mostrar la nueva diapositiva y actualizar el texto indicador
+        document.getElementById(`slide-${currentSlide}`).style.display = 'block';
+        document.getElementById('slide-indicator').innerText = `Fase ${currentSlide} / ${totalSlides}`;
+    }
+</script>
+
+        <footer>
+            <p>© 2026 Luis Gonzalez — Designed for async remote engineering teams.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
 </body>
 </html>
    
