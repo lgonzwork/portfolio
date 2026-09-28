@@ -21,321 +21,315 @@
 <meta name="twitter:title" content="Luis González | QA Engineer & Security Analyst">
 <meta name="twitter:description" content="Especialista en API Testing, DAST, Cypress y documentación técnica.">
 <meta name="twitter:image" content="https://lgonzwork.github.io/index_images/showcase_image1.png">
+    <style>
+        :root {
+            --bg-main: #0a0a0a;
+            --bg-card: #121212;
+            --bg-card-hover: #1a1a1a;
+            --border-color: #262626;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --accent-red: #dc2626;
+            --accent-red-hover: #ef4444;
+            --badge-bg: #1f1212;
+            --badge-border: #450a0a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .header-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            color: var(--text-primary);
+        }
+
+        .role-title {
+            color: var(--accent-red);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 0.25rem;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-info a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-red);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-red);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--border-color);
+        }
+
+        .summary {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 3px solid var(--accent-red);
+            border-radius: 6px;
+            padding: 1rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-2px);
+            background-color: var(--bg-card-hover);
+        }
+
+        .skill-card h3 {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .tag {
+            background-color: var(--badge-bg);
+            border: 1px solid var(--badge-border);
+            color: #fca5a5;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        /* Timeline / Experience */
+        .timeline-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .job-title {
+            color: var(--accent-red);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-family: monospace;
+        }
+
+        ul.bullets {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul.bullets li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        ul.bullets li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-title a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
+
+        /* Languages & Certs */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .item-header { flex-direction: column; gap: 0.25rem; }
+            body { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.lightbox-close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+
+    // Al hacer clic en cualquier imagen con la clase .lightbox-trigger
+    triggers.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+      });
+    });
+
+    // Cerrar al hacer clic en el botón X
+    closeBtn.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+
+    // Cerrar al hacer clic fuera de la imagen (en el fondo oscuro)
+    lightbox.addEventListener('click', (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.classList.remove('active');
+      }
+    });
+
+    // Cerrar presionado la tecla Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <!-- ESTILOS MEJORADOS PARA EL HEADER Y CONTACTO -->
 <style>
-    :root {
-        --bg-main: #0a0a0a;
-        --bg-card: #121212;
-        --bg-card-hover: #1a1a1a;
-        --border-color: #262626;
-        --text-primary: #ffffff;
-        --text-secondary: #a3a3a3;
-        --accent-red: #dc2626;
-        --accent-red-hover: #ef4444;
-        --badge-bg: #1f1212;
-        --badge-border: #450a0a;
-    }
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    body {
-        background-color: var(--bg-main);
-        color: var(--text-primary);
-        line-height: 1.6;
-        padding: 2rem 1rem;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-    }
-
-    /* Header */
     header {
-        border-bottom: 2px solid var(--border-color);
+        border-bottom: 2px solid #262626;
         padding-bottom: 2rem;
         margin-bottom: 2.5rem;
     }
 
-    .header-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        letter-spacing: -0.05em;
-        color: var(--text-primary);
-    }
-
-    .role-title {
-        color: var(--accent-red);
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-top: 0.25rem;
-    }
-
-    .contact-info {
-        margin-top: 1.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.25rem;
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-    }
-
-    .contact-info a {
-        color: var(--text-primary);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .contact-info a:hover {
-        color: var(--accent-red);
-    }
-
-    /* Sections */
-    section {
-        margin-bottom: 3rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        color: var(--accent-red);
-        margin-bottom: 1.25rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    h2::after {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background-color: var(--border-color);
-    }
-
-    .summary {
-        color: var(--text-secondary);
-        font-size: 1rem;
-        text-align: justify;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
-    }
-
-    .skill-card {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-left: 3px solid var(--accent-red);
-        border-radius: 6px;
-        padding: 1rem;
-        transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .skill-card:hover {
-        transform: translateY(-2px);
-        background-color: var(--bg-card-hover);
-    }
-
-    .skill-card h3 {
-        font-size: 0.95rem;
-        color: var(--text-primary);
-        margin-bottom: 0.5rem;
-    }
-
-    .tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.4rem;
-    }
-
-    .tag {
-        background-color: var(--badge-bg);
-        border: 1px solid var(--badge-border);
-        color: #fca5a5;
-        font-size: 0.75rem;
-        padding: 0.2rem 0.5rem;
-        border-radius: 4px;
-        font-family: monospace;
-    }
-
-    /* Timeline / Experience */
-    .timeline-item {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 1.5rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .item-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        margin-bottom: 0.75rem;
-    }
-
-    .company {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--text-primary);
-    }
-
-    .job-title {
-        color: var(--accent-red);
-        font-size: 0.9rem;
-        font-weight: 600;
-    }
-
-    .date {
-        font-size: 0.85rem;
-        color: var(--text-secondary);
-        font-family: monospace;
-    }
-
-    ul.bullets {
-        list-style-type: none;
-        padding-left: 0;
-    }
-
-    ul.bullets li {
-        position: relative;
-        padding-left: 1.25rem;
-        margin-bottom: 0.5rem;
-        color: var(--text-secondary);
-        font-size: 0.95rem;
-    }
-
-    ul.bullets li::before {
-        content: "▹";
-        position: absolute;
-        left: 0;
-        color: var(--accent-red);
-        font-weight: bold;
-    }
-
-    /* Projects Section */
-    .project-card {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        padding: 1.5rem;
-    }
-
-    .project-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: var(--text-primary);
-        margin-bottom: 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .project-title a {
-        color: var(--accent-red);
-        text-decoration: none;
-        font-size: 0.85rem;
-        font-family: monospace;
-    }
-
-    /* Estilos del Mosaico / Galería de Imágenes */
-    .mosaic-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-
-    .mosaic-item {
-        position: relative;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        border-radius: 6px;
-        border: 1px solid var(--border-color);
-        background-color: var(--bg-card);
-        cursor: pointer;
-    }
-
-    .mosaic-item img,
-    .lightbox-trigger {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .mosaic-item:hover img,
-    .lightbox-trigger:hover {
-        transform: scale(1.05);
-        filter: brightness(1.1);
-    }
-
-    /* Estilos de Lightbox / Visualizador de Slides */
-    .lightbox {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.9);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-        padding: 1rem;
-    }
-
-    .lightbox.active {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .lightbox-content {
-        max-width: 90vw;
-        max-height: 85vh;
-        object-fit: contain;
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-        border: 1px solid var(--border-color);
-    }
-
-    .lightbox-close {
-        position: absolute;
-        top: 20px;
-        right: 30px;
-        font-size: 2.5rem;
-        color: var(--text-primary);
-        cursor: pointer;
-        user-select: none;
-        transition: color 0.2s ease;
-        line-height: 1;
-    }
-
-    .lightbox-close:hover {
-        color: var(--accent-red-hover);
-    }
-
-    /* Estilos del Header / Contacto */
     .header-main {
         margin-bottom: 1.75rem;
     }
@@ -359,6 +353,7 @@
         text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
     }
 
+    /* GRID / CONTENEDOR DE BARS DE CONTACTO */
     .contact-bar {
         display: flex;
         flex-wrap: wrap;
@@ -366,6 +361,7 @@
         align-items: center;
     }
 
+    /* PÍLDORAS / BADGES DE CONTACTO */
     .contact-card {
         display: inline-flex;
         align-items: center;
@@ -382,6 +378,7 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
 
+    /* SVG ICONOS DENTRO DEL BADGE */
     .contact-card svg {
         width: 18px;
         height: 18px;
@@ -389,6 +386,7 @@
         transition: transform 0.2s ease, fill 0.2s ease;
     }
 
+    /* HOVER INTERACTIVO EN CADA CONTACTO */
     .contact-card:hover {
         background: #1f1212;
         border-color: #ef4444;
@@ -402,38 +400,17 @@
         transform: scale(1.15);
     }
 
+    /* DESTACADO ESPECIAL PARA EL LINK DE GITHUB */
     .contact-card.primary {
         border-color: #450a0a;
         background: linear-gradient(145deg, #1f1212 0%, #140808 100%);
     }
 
-    /* Languages & Certs */
-    .grid-2col {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding-top: 2rem;
-        border-top: 1px solid var(--border-color);
-        color: var(--text-secondary);
-        font-size: 0.85rem;
-    }
-
-    /* Responsive adjustments */
+    /* RESPONSIVE EN MÓVILES */
     @media (max-width: 768px) {
         .name-title { font-size: 2.2rem; }
         .subtitle { font-size: 1.1rem; }
         .contact-bar { flex-direction: column; align-items: stretch; }
-    }
-
-    @media (max-width: 600px) {
-        h1 { font-size: 2rem; }
-        .item-header { flex-direction: column; gap: 0.25rem; }
-        body { padding: 1rem 0.5rem; }
     }
 </style>
 
@@ -1185,12 +1162,13 @@
             </p>
         </div>
 
-        <!-- Slide 6: Executive Audit Summary & Final Findings -->
+        <!-- Slide 6: Executive Audit Summary & Final Findings (Mosaico 2x2) -->
         <div class="carousel-slide" id="slide-6" style="display: none;">
             <div style="padding: 0.5rem; color: #fff;">
                 <h3 style="color: #dc2626; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.3rem;">📊 Executive Audit Summary & Final Findings</h3>
                 <p style="color: #a3a3a3; font-size: 0.88rem; margin-bottom: 1.2rem;">Consolidated assessment of system quality, reliability, and security post-audit:</p>
                 
+                <!-- Mosaico 2x2 Responsive -->
                 <div class="audit-summary-grid">
                     <div class="audit-card">
                         <div>
@@ -1225,7 +1203,7 @@
                     </div>
                 </div>
 
-                <div style="background: #111; border-top: 1px solid #222; padding: 0.8rem; font-size: 0.85rem; color: #d4d4d4; border-radius: 4px; margin-top: 1rem;">
+                <div style="background: #111; border-top: 1px solid #222; padding: 0.8rem; font-size: 0.85rem; color: #d4d4d4; border-radius: 4px;">
                     <p style="margin: 0;"><strong>Conclusion:</strong> The target system meets all static, dynamic, functional, and security acceptance criteria required for production deployment.</p>
                 </div>
             </div>
@@ -1248,6 +1226,7 @@
             Submit your job opening or inquiry directly to my inbox via API.
         </p>
 
+        <!-- Endpoint de Formspree integrado -->
         <form action="https://formspree.io/f/xjykazze" method="POST" class="booking-form">
             <div class="form-group">
                 <label for="company">Full Name & Company</label>
@@ -1318,7 +1297,7 @@
 <!-- SCRIPT ÚNICO PARA CAROUSEL (6 SLIDES) Y ZOOM MODAL -->
 <script>
     let currentSlide = 1;
-    const totalSlides = 6;
+    const totalSlides = 6; // 5 Fases + 1 Reporte Final
 
     function moveSlide(direction) {
         document.getElementById(`slide-${currentSlide}`).style.display = 'none';
@@ -1332,12 +1311,13 @@
 
         const indicator = document.getElementById('slide-indicator');
         if (currentSlide === totalSlides) {
-            indicator.innerText = `Final Report / ${totalSlides}`;
+            indicator.innerText = `Reporte Final / ${totalSlides}`;
         } else {
-            indicator.innerText = `Phase ${currentSlide} / ${totalSlides}`;
+            indicator.innerText = `Fase ${currentSlide} / ${totalSlides}`;
         }
     }
 
+    // Funciones para Zoom Modal
     function openModal(wrapper) {
         const img = wrapper.querySelector('img');
         const modal = document.getElementById('image-modal');
@@ -1351,8 +1331,10 @@
         document.getElementById('image-modal').style.display = "none";
     }
 </script>
-        
+
 </body>
 </html>
+
+        
 
         
