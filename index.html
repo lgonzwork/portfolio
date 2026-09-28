@@ -1114,15 +1114,15 @@
             </p>
         </div>
 
-        <!-- Slide 2: API Testing (Newman) -->
+        <!-- Slide 2: Security Testing (DAST OWASP ZAP) -->
         <div class="carousel-slide" id="slide-2" style="display: none;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
-                <img src="index_images/self_audit2.png" alt="API Functional & Schema Validation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <img src="index_images/self_audit2.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
                 <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 2: API Functional & Schema Validation (Postman / Newman)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 2: Dynamic Application Security Testing (OWASP ZAP)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Headless CLI execution of Postman integration suites for the contact API. Verified JSON schemas, HTTP status codes (200 OK / 202 Accepted), and response latencies under 1500ms.
+                Automated vulnerability scanning targeting web application endpoints, checking for OWASP Top 10 risks including injection flaws, CSP policies, and HTTP security headers.
             </p>
         </div>
 
@@ -1132,26 +1132,26 @@
                 <img src="index_images/self_audit3.png" alt="Web E2E GUI Automation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
                 <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 3: Web E2E GUI Automation & UI Assertions (Cypress)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 3: Web E2E GUI Automation & UI Assertions (Cypress CLI)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                End-to-end user navigation flow tests, dynamic project rendering, UI carousel controls, modal overlay assertions, and complete form submission cycles executed via Headless CLI runner.
+                Headless UI execution covering critical user journeys, dynamic project rendering, modal overlays, and form submission flows across desktop viewports.
             </p>
         </div>
 
-        <!-- Slide 4: Security Testing (DAST OWASP ZAP) -->
+        <!-- Slide 4: API Testing & Contract Validation (Postman / Newman) -->
         <div class="carousel-slide" id="slide-4" style="display: none;">
             <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
-                <img src="index_images/self_audit4.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <img src="index_images/self_audit4.png" alt="API Functional & Schema Validation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
                 <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Click to enlarge</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 4: Dynamic Application Security Testing (OWASP ZAP)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Phase 4: API Functional & Schema Validation (Postman / Newman)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Dynamic application security assessment executed in Docker. Validated active defenses against XSS, injection vectors, CSP policies, and anti-clickjacking HTTP security headers.
+                Command-line Postman collection runner executing JSON schema assertions, status code validations, and payload verification for integrated endpoints.
             </p>
         </div>
 
         <!-- Slide 5: Executive Audit Summary & Final Findings (Mosaico 2x2) -->
-        <div class="carousel-slide" id="slide-6" style="display: none;">
+        <div class="carousel-slide" id="slide-5" style="display: none;">
             <div style="padding: 0.5rem; color: #fff;">
                 <h3 style="color: #dc2626; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.3rem;">📊 Executive Audit Summary & Final Findings</h3>
                 <p style="color: #a3a3a3; font-size: 0.88rem; margin-bottom: 1.2rem;">Consolidated assessment of system quality, reliability, and security post-audit:</p>
@@ -1200,7 +1200,7 @@
         <!-- Nav Controls -->
         <div class="carousel-nav" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 1rem;">
             <button class="carousel-btn" onclick="moveSlide(-1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">❮ Previous</button>
-            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Phase 1 / 6</span>
+            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 5</span>
             <button class="carousel-btn" onclick="moveSlide(1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">Next ❯</button>
         </div>
     </div>
@@ -1282,10 +1282,10 @@
     <p>© 2026 Luis Gonzalez — Designed for async remote engineering teams.</p>
 </footer>
 
-<!-- SCRIPT ÚNICO PARA CAROUSEL (6 SLIDES) Y ZOOM MODAL -->
+<!-- SCRIPT ÚNICO PARA CAROUSEL (5 SLIDES TOTAL: 4 FASES + 1 REPORTE) Y ZOOM MODAL -->
 <script>
     let currentSlide = 1;
-    const totalSlides = 6; // 5 Fases + 1 Reporte Final
+    const totalSlides = 5; // 4 Fases con imágenes + 1 Reporte Final
 
     function moveSlide(direction) {
         document.getElementById(`slide-${currentSlide}`).style.display = 'none';
