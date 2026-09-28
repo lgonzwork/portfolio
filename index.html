@@ -1067,67 +1067,117 @@
   <img class="lightbox-content" id="lightbox-img" alt="Ampliación de evidencia" />
 </div>
 
-        
+
 <!-- SECCIÓN: CAROUSEL DE TESTING DE TU PROPIA PÁGINA -->
 <section style="margin-top: 3rem;">
     <h2 class="section-header-large">Self-System Audit & Test Cycle</h2>
     <div class="carousel-container" style="background: rgba(18, 18, 18, 0.8); border: 1px solid rgba(220, 38, 38, 0.3); border-left: 3px solid #dc2626; border-radius: 8px; padding: 1.5rem; position: relative;">
         
-        <!-- Slide 1: Security Testing (DAST) -->
-        <div class="carousel-slide active" id="slide-1">
-            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
-                <img src="index_images/showcase_image2.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+        <!-- Slide 1: Recon & Nmap Scan -->
+        <div class="carousel-slide" id="slide-1" style="display: block;">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
+                <img src="index_images/showcase_image2.png" alt="Infrastructure Reconnaissance & Network Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 1: Security & DAST Audit (OWASP ZAP)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 1: Infrastructure Reconnaissance & Network Scan (Nmap)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Escaneo activo de puertos y detección de servicios/OS. Identificación de puertos expuestos (HTTP/HTTPS/SSH) y verificación de superficie de ataque en el servidor objetivo.
+            </p>
+        </div>
+
+        <!-- Slide 2: API Testing (Newman) -->
+        <div class="carousel-slide" id="slide-2" style="display: none;">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
+                <img src="index_images/showcase_image1.png" alt="API Functional & Schema Validation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 2: API Functional & Schema Validation (Postman / Newman)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Ejecución headless de colecciones de integración para la API de contacto (Formspree/Backend). Validación de esquemas JSON, códigos de respuesta HTTP (200 OK vs 400 Bad Request) y latencia &lt; 1500ms.
+            </p>
+        </div>
+
+        <!-- Slide 3: E2E Automation (Cypress) -->
+        <div class="carousel-slide" id="slide-3" style="display: none;">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
+                <img src="index_images/showcase_image1.png" alt="Web E2E GUI Automation" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 3: Web E2E GUI Automation & UI Assertions (Cypress)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Pruebas de navegación, renderizado dinámico de proyectos, carrusel UI, overlays modales y flujo completo de envío de formularios en ejecuciones Headless CLI en Chrome/Electron.
+            </p>
+        </div>
+
+        <!-- Slide 4: Security Testing (DAST OWASP ZAP) -->
+        <div class="carousel-slide" id="slide-4" style="display: none;">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
+                <img src="index_images/showcase_image2.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 4: Dynamic Application Security Testing (OWASP ZAP)</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
                 Evaluación dinámica de vulnerabilidades con ZAP Baseline Scan (55 PASS / 0 FAIL). Verificación de Security Headers (CSP, HSTS) e inyección XSS de prueba en la API de contacto.
             </p>
         </div>
 
-        <!-- Slide 2: API Testing (Newman) -->
-        <div class="carousel-slide" style="display: none;" id="slide-2">
-            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
-                <img src="index_images/showcase_image1.png" alt="Newman API Testing" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+        <!-- Slide 5: Technical Documentation & Architecture -->
+        <div class="carousel-slide" id="slide-5" style="display: none;">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer; position: relative;" onclick="openModal(this)">
+                <img src="index_images/showcase_image2.png" alt="Technical Architecture & Test Strategy" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;">
+                <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.8); color: #fff; font-size: 0.75rem; padding: 4px 8px; border-radius: 4px; border: 1px solid #444;">🔍 Clic para ampliar</span>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 2: API Functional & Schema Assertions (Newman)</h3>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 5: Technical Architecture & Test Strategy Documentation</h3>
             <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Pruebas automatizadas en la capa backend con Postman/Newman. Aserciones de código de estado HTTP (200/202) y latencia de respuesta &lt; 1500ms.
+                Mapeo de matrices de cobertura de pruebas, diseño de casos de prueba en Confluence/Jira Xray y documentación técnica del ecosistema bajo arquitectura de 3 capas.
             </p>
         </div>
 
-        <!-- Slide 3: E2E Automation (Cypress) -->
-        <div class="carousel-slide" style="display: none;" id="slide-3">
-            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
-                <img src="index_images/showcase_image1.png" alt="Cypress E2E Testing" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
-            </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 3: E2E Web Automation (Cypress Headless)</h3>
-            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Validación E2E y Smoke Testing de la interfaz de usuario. Verificación del flujo de llenado de formularios, resolución de componentes y tiempo de ejecución.
-            </p>
-        </div>
+        <!-- Slide 6: Executive Audit Summary & Final Findings -->
+        <div class="carousel-slide" id="slide-6" style="display: none;">
+            <div style="padding: 0.5rem; color: #fff;">
+                <h3 style="color: #dc2626; font-size: 1.25rem; font-weight: 800; margin-bottom: 0.3rem;">📊 Executive Audit Summary & Final Findings</h3>
+                <p style="color: #a3a3a3; font-size: 0.88rem; margin-bottom: 1.2rem;">Consolidado general del ciclo de auditoría de calidad y seguridad:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.2rem;">
+                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
+                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">Network & Infra</h4>
+                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">SECURE</span>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Puertos seguros, sin servicios vulnerables ni exposición indebida.</p>
+                    </div>
+                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
+                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">API Contracts</h4>
+                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">100% PASS</span>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Payloads sanitizados y esquemas JSON estrictamente validados.</p>
+                    </div>
+                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
+                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">E2E Automation</h4>
+                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">STABLE</span>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Flujos críticos de interfaz, carrusel y modales validados sin fallas.</p>
+                    </div>
+                    <div style="background: #141414; border: 1px solid #262626; border-left: 4px solid #10b981; padding: 1rem; border-radius: 6px;">
+                        <h4 style="margin: 0 0 0.3rem 0; font-size: 0.95rem; color: #fff;">DAST Security</h4>
+                        <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem; font-weight: 700; padding: 2px 6px; border-radius: 3px; margin-bottom: 0.5rem;">0 CRITICAL</span>
+                        <p style="font-size: 0.8rem; color: #a3a3a3; margin: 0;">Protección activa contra XSS y cabeceras de seguridad verificadas.</p>
+                    </div>
+                </div>
 
-        <!-- Slide 4: Network & Infra Inspection (Nmap / PowerShell) -->
-        <div class="carousel-slide" style="display: none;" id="slide-4">
-            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
-                <img src="index_images/showcase_image2.png" alt="Nmap & Network Inspection" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+                <div style="background: #111; border-top: 1px solid #222; padding: 0.8rem; font-size: 0.85rem; color: #d4d4d4; border-radius: 4px;">
+                    <p style="margin: 0;"><strong>Conclusión:</strong> El sistema cumple con los criterios de aceptación técnicos, estáticos y dinámicos para entornos de producción.</p>
+                </div>
             </div>
-            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 4: Infrastructure & Transport Audit (Nmap & CLI)</h3>
-            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
-                Escaneo defensivo de puertos de red (80/443), fingerprinting de CDN/servidor e inspección directa de cabeceras HTTP mediante PowerShell CLI.
-            </p>
         </div>
 
         <!-- Nav Controls -->
-        <div class="carousel-nav" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem;">
+        <div class="carousel-nav" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem; border-top: 1px solid #222; padding-top: 1rem;">
             <button class="carousel-btn" onclick="moveSlide(-1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">❮ Anterior</button>
-            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 4</span>
+            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 6</span>
             <button class="carousel-btn" onclick="moveSlide(1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">Siguiente ❯</button>
         </div>
     </div>
 </section>
-        
 
-<!-- 3. SECTION: RECRUITER BOOKING FORM (API INTEGRATED) -->
+<!-- SECTION: RECRUITER BOOKING FORM (API INTEGRATED) -->
 <section style="margin-top: 3rem;">
     <div class="booking-section">
         <h2 style="color: #fff; font-size: 1.4rem; font-weight: 800; text-transform: uppercase;">Schedule an Interview / Hire Request</h2>
@@ -1137,13 +1187,11 @@
 
         <!-- Endpoint de Formspree integrado -->
         <form action="https://formspree.io/f/xjykazze" method="POST" class="booking-form">
-            <!-- Full Name & Company -->
             <div class="form-group">
                 <label for="company">Full Name & Company</label>
                 <input type="text" id="company" name="Company_Name" placeholder="e.g., TechCorp / Jane Doe" required>
             </div>
 
-            <!-- Industry / Company Type -->
             <div class="form-group">
                 <label for="company_type">Industry / Company Type</label>
                 <select id="company_type" name="Company_Type">
@@ -1155,7 +1203,6 @@
                 </select>
             </div>
 
-            <!-- Skill Interest -->
             <div class="form-group">
                 <label for="primary_skill">Primary Technical Skill of Interest</label>
                 <select id="primary_skill" name="Primary_Skill">
@@ -1167,7 +1214,6 @@
                 </select>
             </div>
 
-            <!-- Employment Type -->
             <div class="form-group">
                 <label for="contract_type">Employment / Engagement Type</label>
                 <select id="contract_type" name="Contract_Type">
@@ -1177,19 +1223,16 @@
                 </select>
             </div>
 
-            <!-- Interview Timeline -->
             <div class="form-group">
                 <label for="interview_timeline">Desired Interview Timeline</label>
                 <input type="text" id="interview_timeline" name="Interview_Timeline" placeholder="e.g., This week / ASAP">
             </div>
 
-            <!-- Target Start Date -->
             <div class="form-group">
                 <label for="hire_deadline">Target Hiring Completion Date</label>
                 <input type="date" id="hire_deadline" name="Target_Hiring_Date">
             </div>
 
-            <!-- Additional Details -->
             <div class="form-group full-width">
                 <label for="message">Additional Role & Project Details</label>
                 <textarea id="message" name="Project_Details" rows="3" placeholder="Brief overview of the position, scope, or project expectations..."></textarea>
@@ -1200,68 +1243,55 @@
     </div>
 </section>
 
-<!-- SCRIPT LIGERO PARA EL CAROUSEL -->
+<!-- MODAL PARA ZOOM DE IMÁGENES -->
+<div id="image-modal" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); backdrop-filter: blur(5px); justify-content: center; align-items: center;" onclick="closeModal()">
+    <span style="position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img id="modal-img" style="max-width: 90%; max-height: 85%; border: 1px solid #dc2626; border-radius: 6px; box-shadow: 0 0 25px rgba(220, 38, 38, 0.5);">
+</div>
+
+<footer>
+    <p>© 2026 Luis Gonzalez — Designed for async remote engineering teams.</p>
+</footer>
+
+<!-- SCRIPT ÚNICO PARA CAROUSEL (6 SLIDES) Y ZOOM MODAL -->
 <script>
     let currentSlide = 1;
-    const totalSlides = 2;
+    const totalSlides = 6; // 5 Fases + 1 Reporte Final
 
     function moveSlide(direction) {
-        document.getElementById(`slide-${currentSlide}`).classList.remove('active');
-        currentSlide += direction;
-
-        if (currentSlide > totalSlides) currentSlide = 1;
-        if (currentSlide < 1) currentSlide = totalSlides;
-
-        document.getElementById(`slide-${currentSlide}`).classList.add('active');
-        document.getElementById('slide-indicator').innerText = `Fase ${currentSlide} / ${totalSlides}`;
-    }
-</script>
-
-        <footer>
-            <p>© 2026 Luis Gonzalez — Designed for async remote engineering teams.</p>
-        </footer>
-    </div>
-
-    <!-- Additional Details -->
-            <div class="form-group full-width">
-                <label for="message">Additional Role & Project Details</label>
-                <textarea id="message" name="Project_Details" rows="3" placeholder="Brief overview of the position, scope, or project expectations..."></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Submit Interview Request</button>
-        </form>
-    </div>
-</section>
-
-<!-- SCRIPT LIGERO PARA EL CAROUSEL (4 FASES) -->
-<script>
-    let currentSlide = 1;
-    const totalSlides = 4; // Actualizado a 4 slides
-
-    function moveSlide(direction) {
-        // Ocultar la diapositiva actual
         document.getElementById(`slide-${currentSlide}`).style.display = 'none';
 
-        // Calcular la siguiente diapositiva
         currentSlide += direction;
 
         if (currentSlide > totalSlides) currentSlide = 1;
         if (currentSlide < 1) currentSlide = totalSlides;
 
-        // Mostrar la nueva diapositiva y actualizar el texto indicador
         document.getElementById(`slide-${currentSlide}`).style.display = 'block';
-        document.getElementById('slide-indicator').innerText = `Fase ${currentSlide} / ${totalSlides}`;
+
+        const indicator = document.getElementById('slide-indicator');
+        if (currentSlide === totalSlides) {
+            indicator.innerText = `Reporte Final / ${totalSlides}`;
+        } else {
+            indicator.innerText = `Fase ${currentSlide} / ${totalSlides}`;
+        }
+    }
+
+    // Funciones para Zoom Modal
+    function openModal(wrapper) {
+        const img = wrapper.querySelector('img');
+        const modal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-img');
+        
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+    }
+
+    function closeModal() {
+        document.getElementById('image-modal').style.display = "none";
     }
 </script>
 
-        <footer>
-            <p>© 2026 Luis Gonzalez — Designed for async remote engineering teams.</p>
-        </footer>
-    </div>
-
 </body>
 </html>
 
-</body>
-</html>
-   
+        
