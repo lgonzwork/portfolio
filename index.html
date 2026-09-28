@@ -1067,36 +1067,65 @@
   <img class="lightbox-content" id="lightbox-img" alt="Ampliación de evidencia" />
 </div>
 
-<!-- 2. SECCIÓN: CAROUSEL DE TESTING DE TU PROPIA PÁGINA -->
+        
+<!-- SECCIÓN: CAROUSEL DE TESTING DE TU PROPIA PÁGINA -->
 <section style="margin-top: 3rem;">
     <h2 class="section-header-large">Self-System Audit & Test Cycle</h2>
-    <div class="carousel-container">
-        <!-- Slide 1: Security Testing -->
+    <div class="carousel-container" style="background: rgba(18, 18, 18, 0.8); border: 1px solid rgba(220, 38, 38, 0.3); border-left: 3px solid #dc2626; border-radius: 8px; padding: 1.5rem; position: relative;">
+        
+        <!-- Slide 1: Security Testing (DAST) -->
         <div class="carousel-slide active" id="slide-1">
-            <img src="ruta-screenshot-zap-scan.png" alt="OWASP ZAP Security Scan" class="carousel-img">
-            <h3 style="color: #fff; font-size: 1.1rem;">Fase 1: Security & DAST Audit (OWASP ZAP)</h3>
-            <p style="color: #a3a3a3; font-size: 0.85rem; margin-top: 0.3rem;">
-                Evaluación dinámica de vulnerabilidades, verificación de Security Headers (CSP, HSTS) y pruebas contra XSS en el formulario de contacto.
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
+                <img src="index_images/showcase_image2.png" alt="OWASP ZAP Security Scan" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 1: Security & DAST Audit (OWASP ZAP)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Evaluación dinámica de vulnerabilidades con ZAP Baseline Scan (55 PASS / 0 FAIL). Verificación de Security Headers (CSP, HSTS) e inyección XSS de prueba en la API de contacto.
             </p>
         </div>
 
-        <!-- Slide 2: E2E Automation -->
-        <div class="carousel-slide" id="slide-2">
-            <img src="ruta-screenshot-cypress.png" alt="Cypress E2E Testing" class="carousel-img">
-            <h3 style="color: #fff; font-size: 1.1rem;">Fase 2: E2E Web Automation (Cypress)</h3>
-            <p style="color: #a3a3a3; font-size: 0.85rem; margin-top: 0.3rem;">
-                Verificación automatizada de interfaz, resolución responsive, navegación fluida y comportamiento de inputs.
+        <!-- Slide 2: API Testing (Newman) -->
+        <div class="carousel-slide" style="display: none;" id="slide-2">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
+                <img src="index_images/showcase_image1.png" alt="Newman API Testing" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 2: API Functional & Schema Assertions (Newman)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Pruebas automatizadas en la capa backend con Postman/Newman. Aserciones de código de estado HTTP (200/202) y latencia de respuesta &lt; 1500ms.
+            </p>
+        </div>
+
+        <!-- Slide 3: E2E Automation (Cypress) -->
+        <div class="carousel-slide" style="display: none;" id="slide-3">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
+                <img src="index_images/showcase_image1.png" alt="Cypress E2E Testing" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 3: E2E Web Automation (Cypress Headless)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Validación E2E y Smoke Testing de la interfaz de usuario. Verificación del flujo de llenado de formularios, resolución de componentes y tiempo de ejecución.
+            </p>
+        </div>
+
+        <!-- Slide 4: Network & Infra Inspection (Nmap / PowerShell) -->
+        <div class="carousel-slide" style="display: none;" id="slide-4">
+            <div style="border-radius: 6px; overflow: hidden; border: 1px solid #262626; margin-bottom: 1rem; cursor: pointer;">
+                <img src="index_images/showcase_image2.png" alt="Nmap & Network Inspection" class="carousel-img" style="width: 100%; display: block; object-fit: cover; max-height: 420px;" onclick="openModal(this.src)">
+            </div>
+            <h3 style="color: #fff; font-size: 1.15rem; font-weight: 700;">Fase 4: Infrastructure & Transport Audit (Nmap & CLI)</h3>
+            <p style="color: #a3a3a3; font-size: 0.88rem; margin-top: 0.4rem; line-height: 1.5;">
+                Escaneo defensivo de puertos de red (80/443), fingerprinting de CDN/servidor e inspección directa de cabeceras HTTP mediante PowerShell CLI.
             </p>
         </div>
 
         <!-- Nav Controls -->
-        <div class="carousel-nav">
-            <button class="carousel-btn" onclick="moveSlide(-1)">❮ Anterior</button>
-            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 2</span>
-            <button class="carousel-btn" onclick="moveSlide(1)">Siguiente ❯</button>
+        <div class="carousel-nav" style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.2rem;">
+            <button class="carousel-btn" onclick="moveSlide(-1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">❮ Anterior</button>
+            <span id="slide-indicator" style="color: #dc2626; font-weight: 700; font-size: 0.9rem;">Fase 1 / 4</span>
+            <button class="carousel-btn" onclick="moveSlide(1)" style="background: rgba(220, 38, 38, 0.15); border: 1px solid rgba(220, 38, 38, 0.4); color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;">Siguiente ❯</button>
         </div>
     </div>
 </section>
+        
 
 <!-- 3. SECTION: RECRUITER BOOKING FORM (API INTEGRATED) -->
 <section style="margin-top: 3rem;">
